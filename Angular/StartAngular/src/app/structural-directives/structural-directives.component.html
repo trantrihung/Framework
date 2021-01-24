@@ -1,0 +1,63 @@
+<!-- nfIF=f -->
+<!-- Thẻ p sẽ được hiển thị khi biến isActives là true -->
+<!-- directives có dấu * đằng trước nhận vế sau là 1 biến -->
+<p *ngIf="isActive">Hello CyberSoft</p>
+<button (click)="isActive = !isActive">Toogle</button>
+
+<!-- view khi đã đăng nhập -->
+<div *ngIf="isLogin; else loginTemplate">
+  <h3>Hello "hung"</h3>
+  <button (click)="isLogin = false">Đăng xuất</button>
+</div>
+
+<!-- View khi chua dang nhap -->
+<!-- <div *ngIf="!isLogin">
+  <h3>well come</h3>
+  <button (click)="isLogin = true">dang nhap</button>
+</div> -->
+
+<!-- ng-template: Mặc định nội dung bên trong ng-template sẽ ko được hiển thị ra giao diện, nội dung này chỉ được hiển thị khi ta gọi đên tham chiếu của ng-template -->
+<ng-template #loginTemplate>
+  <div>
+    <h3>well come</h3>
+    <button (click)="isLogin = true">dang nhap</button>
+  </div>
+</ng-template>
+
+<!-- ngSwitch -->
+<!-- ko có dấu * đằng trước thì vế sau là 1 chuỗi nên phải thêm [] ngược lại nếu có dấu * mà đằng sau muốn nhận là 1 chuỗi thì phải thêm nháy đơn ''-->
+<div [ngSwitch]="color">
+  <p *ngSwitchCase="'primary'" class="bg-primary">Primary</p>
+  <p *ngSwitchCase="'secondary'" class="bg-secondary">Secondary</p>
+  <p *ngSwitchCase="'warning'" class="bg-warning">Warning</p>
+  <p *ngSwitchCase="'danger'" class="bg-danger">Danger</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
+<select [(ngModel)]="color">
+  <option value="">Default</option>
+  <option value="primary">Primary</option>
+  <option value="secondary">Secondary</option>
+  <option value="danger">Danger</option>
+  <option value="warning">Warning</option>
+</select>
+
+<!-- ngFor -->
+<p *ngFor="let movie of movieList; let idx = index; count as total">
+  {{ idx + 1 }}/{{ total }}: {{ movie.name }} - {{ movie.price }}
+</p>
+
+<!-- Không thể có 2 structural-directives trên cùng 1 thẻ -->
+<!-- ng-container giông với Fragment bên react -->
+<ng-container *ngIf="movieList">
+  <p *ngFor="let movie of movieList; let idx = index; count as total">
+    {{ movie.name }} - {{ movie.price }}
+  </p>
+</ng-container>
+
+<!-- ngTemPlateOutlet: tái sử dụng lại đoạn html -->
+<ng-template #alertTemplate>
+  <div class="alert alert-danger">
+    <span>Something went wrong</span>
+  </div>
+</ng-template>
+<ng-container *ngTemPlateOutlet="alertTemplate"></ng-container>

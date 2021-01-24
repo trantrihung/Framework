@@ -1,0 +1,11 @@
+[
+  { "id": 1, "name": "Iphone","image": "images/sp_iphoneX.png", "manHinh":"7inh", "ram": "16gb", "rom": "64gb","price": 200000 },
+  {
+    "id": 2,
+    "name": "Blackberry",
+   "image": "images/sp_blackberry.png",
+    "manHinh":"6inh", "ram": "6gb", "rom": "32gb","price": 100000
+  },
+  { "id": 3, "name": "Samsung","image": "images/sp_note7.png", "manHinh":"5inh", "ram": "14gb", "rom": "64gb","price": 500000 },
+  { "id": 4, "name": "vivo","image": "images/sp_vivo850.png", "manHinh":"5inh", "ram": "12gb", "rom": "64gb","price": 300000 }
+]

@@ -1,0 +1,1 @@
+ng g c ten_component --flat

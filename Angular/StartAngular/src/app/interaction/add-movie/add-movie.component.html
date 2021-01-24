@@ -1,0 +1,17 @@
+<div class="form-group">
+  <label>Ten Phim</label>
+  <input type="text" class="form-control" [(ngModel)]="form.name" />
+</div>
+
+<div class="form-group">
+  <label>Gia Phim</label>
+  <input type="text" class="form-control" [(ngModel)]="form.price" />
+</div>
+
+<div class="form-group">
+  <label>Hinh Anh</label>
+  <!-- <input type="file" class="form-control" [(ngModel)]="form.img" /> -->
+  <input type="file" (change)="handleSelecFile($event)" />
+</div>
+
+<button class="btn btn-primary" (click)="handleAddMovie()">Them Phim</button>

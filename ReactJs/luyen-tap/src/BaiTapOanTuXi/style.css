@@ -1,0 +1,116 @@
+.oanTuXi {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to right, rgb(226, 56, 56), rgb(54, 255, 44));
+  font-family: "Pony";
+}
+@font-face {
+  font-family: "Pony";
+  src: url("./Pony.ttf");
+}
+
+.col-4 {
+  /* display: flex;
+  justify-content: center; */
+}
+
+.divChiBi {
+  width: 250px;
+  height: 300px;
+  position: relative;
+}
+
+.col-center {
+  display: flex;
+  justify-content: center;
+}
+.divChiBi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: inset 0 0 20px #000000;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.chibi {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.tuXi button {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.speech-bubble {
+  background: #ddd;
+  color: #333;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 4em;
+  margin-bottom: 1em;
+  padding: 0 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  min-width: 7em;
+  min-height: 7em;
+  top: 0;
+  left: 0;
+}
+.speech-bubble:after {
+  border: 1em solid transparent;
+  border-top-color: #ddd;
+  content: "";
+  margin-left: -1em;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+}
+
+.btnItem {
+  border: none;
+}
+.btnItem:focus {
+  outline: none;
+}
+.hieuUng {
+  position: absolute;
+  left: 0;
+  animation: topDown 0.5s;
+  -webkit-animation: topDown 0.8s;
+}
+
+@keyframes topDown {
+  0% {
+    top: -50px;
+  }
+  25% {
+    top: 100px;
+  }
+  50% {
+    top: -50px;
+  }
+  75% {
+    top: 100px;
+  }
+  100% {
+    top: 0;
+  }
+}

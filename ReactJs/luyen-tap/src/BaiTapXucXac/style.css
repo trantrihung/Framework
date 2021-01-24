@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  font-family: fontPony;
+  font-size: 30px;
+}
+@font-face {
+  font-family: "fontPony";
+  src: url("./Pony.ttf");
+}
+.taixiu {
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-weight: 700;
+  background: rgb(0, 247, 255);
+  text-align: center;
+  border: none;
+  border: 5px solid rgb(82, 238, 98);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.col-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 75px;
+  height: 75px;
+  margin-left: 10px;
+}
+
+.thongtin {
+  margin-top: 50px;
+  text-align: center;
+}

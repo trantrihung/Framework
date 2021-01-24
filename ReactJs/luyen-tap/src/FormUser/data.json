@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "userName": "hung",
+    "fullName": "tran tri hung",
+    "email": "hung@gmail.com",
+    "position": "Employee",
+    "dateOfBirth": "02/11/1996"
+  },
+  {
+    "id": 2,
+    "userName": "ronaldo",
+    "fullName": "C.ronaldo",
+    "email": "hung@gmail.com",
+    "position": "Employee",
+    "dateOfBirth": "02/11/1996"
+  },
+  {
+    "id": 3,
+    "userName": "messi",
+    "fullName": "l.messi",
+    "email": "hung@gmail.com",
+    "position": "Employee",
+    "dateOfBirth": "02/11/1996"
+  }
+]
