@@ -9,6 +9,7 @@ import { TodoListPrimaryTheme } from "../Theme/TodoListPrimaryTheme";
 import { Button } from "../ComponentTodoList/Button";
 import { Table, Th, Tr, Thead, Tbody } from "../ComponentTodoList/Table";
 import { connect } from "react-redux";
+import { changeThemeAction } from "../redux/action/TodoListAction";
 
 class TodoList extends Component {
   renderOption = () => {
@@ -31,7 +32,7 @@ class TodoList extends Component {
           <Heading1>Todo List</Heading1>
           <label>Task name</label>
           <div>
-            <input style={{ width: "70%" }} />
+            <input onChange={this.props.changeValue} style={{ width: "70%" }} />
             <Button>Add task</Button>
             <Button>Update task</Button>
           </div>
@@ -96,11 +97,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     changeTheme: (e) => {
-      dispatch({
-        type: "CHANGE_THEME",
-        e,
-      });
+      dispatch(changeThemeAction(e));
     },
+    changeValue: ()=> {
+      dispatch(changeValueAction)
+    }
   };
 };
 

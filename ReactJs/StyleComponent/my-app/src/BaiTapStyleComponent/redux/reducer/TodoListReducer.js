@@ -1,6 +1,7 @@
 import { TodoListDarkTheme } from "../../Theme/TodoListDarkTheme";
 import { TodoListLightTheme } from "../../Theme/TodoListLightTheme";
 import { TodoListPrimaryTheme } from "../../Theme/TodoListPrimaryTheme";
+import { CHANGE_THEME } from "../constant/TodoListContant";
 
 const defaultState = {
   theme: TodoListDarkTheme,
@@ -13,7 +14,7 @@ const defaultState = {
 
 export const TodoListReducer = (state = defaultState, action) => {
   switch (action.type) {
-    case "CHANGE_THEME": {
+    case CHANGE_THEME: {
       const { value } = action.e.target;
       // console.log(value);
       // let index = state.arrThemes.findIndex((theme) => {
@@ -22,13 +23,13 @@ export const TodoListReducer = (state = defaultState, action) => {
       // if (index !== -1) {
       //   state.theme = state.arrThemes[index].theme;
       // }
-      [...state.arrThemes].filter((item) => {
+      let arrThemesUpdate = [...state.arrThemes];
+      arrThemesUpdate = arrThemesUpdate.filter((item) => {
         return item.id == value;
       });
-      return {
-        ...state,
-        theme: state.arrThemes.filter((item) => item.id == value),
-      };
+      // console.log(arrThemesUpdate[0].theme);
+      // state.theme = arrThemesUpdate[0].theme;
+      return { ...state, theme: arrThemesUpdate[0].theme };
     }
     default:
       return { ...state };
