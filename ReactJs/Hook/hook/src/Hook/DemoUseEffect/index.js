@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import ChildUseEffect from "./ChildUseEffect";
 
 export default function DemoUseEffect(props) {
-  let [number, setNumber] = useState(1);
+  let [number, setNumber] = useState(0);
   const handleIncrease = () => {
     setNumber(number + 1);
   };
+
+  const useCallbacknumber = useCallback(handleIncrease, [number]);
 
   //là hàm chạy sau khi render || sẽ chạy cả 2 didmount và didupdate trong mọi trường hợp
   // useEffect(() => {
@@ -14,14 +16,14 @@ export default function DemoUseEffect(props) {
 
   // cách viết thay thế cho componentdidmout cho []
   useEffect(() => {
-    console.log("didmount");
+    console.log("didmount father");
   }, []);
 
   // cách viết thay thế cho componentdidupdate
   useEffect(() => {
-    console.log("didupdate");
+    console.log("didupdate father");
     return () => {
-      console.log("willmount");
+      console.log("willmount father");
     };
   }, [number]);
 
@@ -35,7 +37,6 @@ export default function DemoUseEffect(props) {
           src="https://cdn141.picsart.com/326064119132201.jpg"
           alt="abc"
         />
-
         <div className="card-body">
           <h4 className="card-title">Title</h4>
           <p className="card-text">{number} tim</p>
@@ -45,8 +46,14 @@ export default function DemoUseEffect(props) {
       <button className="btn btn-success" onClick={handleIncrease}>
         Tang
       </button>
+      <button>
+        hung cai 
+      </button>
 
-      {number === 1 ? <ChildUseEffect /> : ""}
+      {/* {number === 1 ? <ChildUseEffect /> : ""} */}
+      <ChildUseEffect />
     </div>
   );
 }
+
+
