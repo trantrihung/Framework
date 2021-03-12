@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 .btn-blue {
+<<<<<<< HEAD
   @apply rounded-full py-2 px-3 uppercase text-xs font-bold cursor-pointer tracking-wider;
+=======
+  @apply bg-blue-500 hover:bg-blue-700 text-white;
+>>>>>>> ed2f7ecc0c96ed312b0683952a508dc15b04da51
 }

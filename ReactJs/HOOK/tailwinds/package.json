@@ -6,12 +6,18 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
+<<<<<<< HEAD
     "axios": "^0.21.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.2",
     "redux": "^4.0.5",
+=======
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.2",
+>>>>>>> ed2f7ecc0c96ed312b0683952a508dc15b04da51
     "web-vitals": "^1.1.0"
   },
   "scripts": {
@@ -45,8 +51,11 @@
     "postcss-cli": "^8.3.1",
     "stylelint": "^13.12.0",
     "stylelint-config-standard": "^21.0.0",
+<<<<<<< HEAD
     "stylelint-csstree-validator": "^1.9.0",
     "stylelint-scss": "^3.19.0",
+=======
+>>>>>>> ed2f7ecc0c96ed312b0683952a508dc15b04da51
     "tailwindcss": "^2.0.3"
   }
 }

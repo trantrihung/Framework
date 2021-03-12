@@ -29136,6 +29136,7 @@ video {
 }
 
 .btn-blue {
+<<<<<<< HEAD
   border-radius: 9999px;
   cursor: pointer;
   font-weight: 700;
@@ -29147,6 +29148,20 @@ video {
   padding-right: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+=======
+  --tw-bg-opacity: 1;
+  background-color: rgba(59, 130, 246, var(--tw-bg-opacity));
+}
+
+.btn-blue:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgba(29, 78, 216, var(--tw-bg-opacity));
+}
+
+.btn-blue {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+>>>>>>> ed2f7ecc0c96ed312b0683952a508dc15b04da51
 }
 
 @media (min-width: 640px) {
